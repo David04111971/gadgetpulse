@@ -7,11 +7,72 @@
 
 header {
     background-color: #003366;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    color: white;<header><header>
+  <h1>GadgetPulse</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#smart-home">Smart Home</a></li>
+      <li><a href="#electronics">Electronics</a></li>
+      <li><a href="#pets">Pets</a></li>
+      <li><a href="#women">Women</a></li>
+      <li><a href="#babies">Babies</a></li>
+      <li><a href="#men">Men</a></li>
+    </ul>
+  </nav>
+  <input type="text" id="searchInput" placeholder="Search gadgets..." />
+</header> 
+  <h1>GadgetPulse</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#smart-home">Smart Home</a></li>
+      <li><a href="#electronics">Electronics</a></li>
+      <li><a href="#pets">Pets</a></li>
+/* Style the header background and layout */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-h1 {
-    font-size: 2rem;
+/* Style the logo (h1) */
+header h1 {
+  margin: 0;
+  font-size: 28px;
 }
+
+/* Style the nav list */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Style the links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Style the search input */
+#searchInput {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  max-width: 200px
+   
+
