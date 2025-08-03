@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GadgetPulse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --card-bg: #fff;
+      --nav-bg: #222;
+      --link-color: white;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --card-bg: #1f1f1f;
+      --nav-bg: #000;
+      --link-color: #fff;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--nav-bg);
+      color: var(--link-color);
+      padding: 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0.5em 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0 1em;
+    }
+
+    nav a {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #searchInput {
+      margin-top: 1em;
+      padding: 0.5em;
+      width: 60%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #toggleTheme {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: #555;
+      color: white;
+      border: none;
+      padding: 0.4em 0.8em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 2em;
+      text-align: center;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2em;
+      margin-top: 2em;
+    }
+
+    .product {
+      background-color: var(--card-bg);
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .product:hover img {
+      transform: scale(1.05);
+    }
+
+    #noResults {
+      margin-top: 1em;
+      font-style: italic;
+      display: none;
+    }
+
+    footer {
+      background-color: var(--nav-bg);
+      color: var(--link-color);
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <header>
+    <h1>GadgetPulse</h1>
+    <button id="toggleTheme">Toggle Theme</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="smart-home.html">Smart Home</a></li>
+        <li><a href="pets-gadgets.html">Pets</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="babies.html">Babies</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="electronics.html">Electronics</a></li>
+      </ul>
+    </nav>
+    <input type="text" id="searchInput" placeholder="Search gadgets..." onkeyup="filterProducts()" />
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Welcome to GadgetPulse</h2>
+      <p>Your hub for trending tech and smart gadgets. Browse our curated collections with direct Amazon links.</p>
+    </section>
+
+    <section class="featured">
+      <h2>Featured Smart Home Products</h2>
+      <div class="product-grid" id="productGrid">
+        <div class="product">
+          <img src="https://m.media-amazon.com/images/I/61rT+R0uqwL._AC_SL1500_.jpg" alt="Smart Plug" />
+          <h3>Smart Plug</h3>
+          <a href="https://www.amazon.com/dp/B089DR29T6?tag=davesamazon0411-20" target="_blank">View on Amazon</a>
+        </div>
+        <div class="product">
+          <img src="https://m.media-amazon.com/images/I/61dXCr3pM2L._AC_SL1500_.jpg" alt="Smart Thermostat" />
+          <h3>Smart Thermostat</h3>
+          <a href="https://www.amazon.com/dp/B08HRPDYTP?tag=davesamazon0411-20" target="_blank">View on Amazon</a>
+        </div>
+        <div class="product">
+          <img src="https://m.media-amazon.com/images/I/71g40mlbinL._AC_SL1500_.jpg" alt="Smart Bulb" />
+          <h3>Smart Bulb</h3>
+          <a href="https://www.amazon.com/dp/B07XJ6C2W3?tag=davesamazon0411-20" target="_blank">View on Amazon</a>
+        </div>
+      </div>
+      <p id="noResults">No matching products found.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GadgetPulse. All rights reserved. As an Amazon Associate, we may earn from qualifying purchases.</p>
+  </footer>
+
+  <script>
+    function filterProducts() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const products = document.querySelectorAll('.product');
+      let matchFound = false;
+
+      products.forEach(product => {
+        const title = product.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(filter)) {
+          product.style.display = "";
+          matchFound = true;
+        } else {
+          product.style.display = "none";
+        }
+      });
+
+      document.getElementById('noResults').style.display = matchFound ? "none" : "block";
+    }
+
+    document.getElementById('toggleTheme').addEventListener('click', () => {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      body.setAttribute('data-theme', currentTheme === 'light' ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
