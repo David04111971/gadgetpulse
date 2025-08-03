@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Home – GadgetPulse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Smart Home</h1><a href="index.html">← Back to Home</a></header>
+  <main>
+    <p>Explore our top picks in smart home technology, from smart plugs to security systems.</p>
+  </main>
+</body>
+</html>
