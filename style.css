@@ -1,4 +1,4 @@
-body {
+   body {
     font-family: 'Inter', sans-serif;
     background-color: #f8f8f8;
     margin: 0;
@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: #003366;
     color: white;
     padding: 20px;
     text-align: center;
