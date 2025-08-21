@@ -10,9 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronics – GadgetPulse</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+        h1 { text-align: center; margin-bottom: 30px; }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
-        .product-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center; background: #fff; }
+        .product-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; text-align: center; background: #fff; transition: transform 0.2s; }
+        .product-card:hover { transform: scale(1.03); }
         .product-card img { max-width: 100%; height: auto; border-radius: 4px; }
         .product-card h3 { font-size: 1.1em; margin: 10px 0 5px; }
         .product-card p { font-size: 0.9em; color: #555; }
@@ -21,11 +23,8 @@
     </style>
 </head>
 <body>
-
 <h1>Electronics – GadgetPulse</h1>
-
 <div class="product-grid">
-
     <!-- Product 1 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61UxfXTUyvL._AC_SL1500_.jpg" alt="Anker PowerCore 10000 Portable Charger">
@@ -33,7 +32,6 @@
         <p>Compact, high-speed portable charger. Trusted brand under $50.</p>
         <a href="https://www.amazon.com/dp/B0194WDVHI?tag=davedazon0411-20" target="_blank">Shop on Amazon</a>
     </div>
-
     <!-- Product 2 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._AC_SL1500_.jpg" alt="Logitech M325 Wireless Mouse">
@@ -41,7 +39,6 @@
         <p>Reliable, ergonomic wireless mouse. Great for laptops. Under $20.</p>
         <a href="https://www.amazon.com/dp/B007PJ4PKK?tag=davedazon0411-20" target="_blank">Shop on Amazon</a>
     </div>
-
     <!-- Product 3 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61cQhKUSYzL._AC_SL1500_.jpg" alt="TP-Link WiFi Range Extender">
@@ -49,7 +46,6 @@
         <p>Boosts signal in dead zones. Simple plug-in setup. Under $25.</p>
         <a href="https://www.amazon.com/dp/B07N1WW638?tag=davedazon0411-20" target="_blank">Shop on Amazon</a>
     </div>
-
     <!-- Product 4 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71qN-m8kQ3L._AC_SL1500_.jpg" alt="Kasa Smart Plug by TP-Link">
@@ -57,7 +53,6 @@
         <p>Control outlets remotely with Alexa or Google Home. Under $30.</p>
         <a href="https://www.amazon.com/dp/B07B8W2KHZ?tag=davedazon0411-20" target="_blank">Shop on Amazon</a>
     </div>
-
     <!-- Product 5 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71j9sP6eZIL._AC_SL1500_.jpg" alt="SanDisk 128GB Ultra MicroSDXC">
@@ -65,7 +60,6 @@
         <p>Fast storage for phones, cameras, and tablets. Under $20.</p>
         <a href="https://www.amazon.com/dp/B08GY99KL6?tag=davedazon0411-20" target="_blank">Shop on Amazon</a>
     </div>
-
     <!-- Product 6 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/81bDXB1nJIL._AC_SL1500_.jpg" alt="ASUS VivoBook 15">
@@ -74,7 +68,6 @@
         <p><strong>$369.99</strong></p>
         <a href="https://www.amazon.com/dp/B09TTF84XJ?tag=davedazon0411-20" target="_blank">Buy on Amazon</a>
     </div>
-
     <!-- Product 7 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/81zoRJFCYIL._AC_SL1500_.jpg" alt="Microsoft Surface Go 3">
@@ -83,7 +76,6 @@
         <p><strong>$399.99</strong></p>
         <a href="https://www.amazon.com/dp/B09DK2SKB2?tag=davedazon0411-20" target="_blank">Buy on Amazon</a>
     </div>
-
     <!-- Product 8 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61cWY8U87mL._AC_SL1500_.jpg" alt="Lenovo Chromebook Duet 3">
@@ -92,7 +84,6 @@
         <p><strong>$289.99</strong></p>
         <a href="https://www.amazon.com/dp/B0B9WR9KMY?tag=davedazon0411-20" target="_blank">Buy on Amazon</a>
     </div>
-
     <!-- Product 9 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/81DgIMfV6eL._AC_SL1500_.jpg" alt="Fire HD 10 Tablet">
@@ -101,7 +92,6 @@
         <p><strong>$139.99</strong></p>
         <a href="https://www.amazon.com/dp/B08BX7FV5L?tag=davedazon0411-20" target="_blank">Buy on Amazon</a>
     </div>
-
     <!-- Product 10 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/61kWB+uzR2L._AC_SL1000_.jpg" alt="Dell Inspiron 15">
@@ -110,7 +100,6 @@
         <p><strong>$349.99</strong></p>
         <a href="https://www.amazon.com/dp/B0C1X6PBQ8?tag=davedazon0411-20" target="_blank">Buy on Amazon</a>
     </div>
-
     <!-- Product 11 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/81e4gs3Jw4L._AC_SL1500_.jpg" alt="ASUS Chromebook Flip">
@@ -119,7 +108,6 @@
         <p><strong>$299.99</strong></p>
         <a href="https://www.amazon.com/dp/B086P2Z1M3?tag=davedazon0411-20" target="_blank">Buy on Amazon</a>
     </div>
-
     <!-- Product 12 -->
     <div class="product-card">
         <img src="https://m.media-amazon.com/images/I/71ZDY57yTQL._AC_SL1500_.jpg" alt="Apple MacBook Air M1">
@@ -128,5 +116,6 @@
         <p><strong>$749.99</strong></p>
         <a href="https://www.amazon.com/dp/B08N5LNQCX?tag=davedazon0411-20" target="_blank">Buy on Amazon</a>
     </div>
-
-</div>https://m.media-amazon.com/images/I/81e4gs3Jw4L._AC_SL1500_.jpg" alt="ASUS Chromebook Flip">t-card">k Air M1</h3>    <p>13” Retina, 8GB RAM, 256GB SSD – Silent performance, long battery life.</p>
+</div>
+</body>
+</html> 
