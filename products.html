@@ -1,157 +1,68 @@
-
-David Holly
-1:05 PM (1 minute ago)
-to me
-
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GadgetPulse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the main GadgetPulse collections. Choose a topic to explore useful technology and everyday gadget ideas.">
+  <title>Product Hub | GadgetPulse</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    [data-theme="dark"] { background-color: #121212; color: #eee; }
-    header {
-      position: sticky; top: 0; background-color: #fff; z-index: 1000;
-      padding: 1rem; display: flex; flex-direction: column; align-items: center;
-      transition: background-color 0.3s;
-    }
-    [data-theme="dark"] header { background-color: #1e1e1e; }
-    header h1 { margin: 0.5rem 0; }
-    nav ul { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0.5rem 0; flex-wrap: wrap; justify-content: center; }
-    nav a { text-decoration: none; color: inherit; font-weight: 600; }
-    #searchInput { margin: 0.5rem 0; padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc; width: 90%; max-width: 400px; }
-    .intro, .featured { padding: 2rem; text-align: center; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 1rem; }
-    .product { background-color: #fff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; padding: 1rem; }
-    [data-theme="dark"] .product { background-color: #2a2a2a; }
-    .product:hover { transform: translateY(-5px); box-shadow: 0 8px 18px rgba(0,0,0,0.15); }
-    .product img { max-width: 100%; height: auto; border-radius: 8px; }
-    .product h3 { margin: 0.5rem 0; }
-    footer { text-align: center; padding: 1rem; background-color: #eee; color: #555; }
-    [data-theme="dark"] footer { background-color: #1a1a1a; color: #aaa; }
-    #themeToggle { margin-top: 0.5rem; padding: 0.5rem 1rem; border: none; background-color: #007BFF; color: white; border-radius: 8px; cursor: pointer; }
-    #noResults { margin-top: 1rem; font-style: italic; color: #888; display: none; }
+    .page-hero { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; text-align: center; }
+    .page-hero h2 { margin-bottom: .5rem; }
+    .category-grid { max-width: 1100px; margin: 0 auto 3rem; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 1.25rem; }
+    .category-card { overflow: hidden; border-radius: 14px; background: #fff; box-shadow: 0 3px 14px rgba(0,0,0,.09); }
+    .category-card img { display: block; width: 100%; height: 190px; object-fit: cover; }
+    .category-card .card-copy { padding: 1rem 1.1rem 1.25rem; }
+    .category-card h3 { margin: 0 0 .4rem; }
+    .category-card p { margin: 0; }
+    .back-link { display: inline-block; margin-top: 1rem; }
+    @media (prefers-color-scheme: dark) { .category-card { background: #222; color: #f5f5f5; } }
   </style>
 </head>
 <body>
   <header>
     <h1>GadgetPulse</h1>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
-        <li><a href="products.html?category=smart-home">Smart Home</a></li>
-        <li><a href="products.html?category=pets">Pets</a></li>
-        <li><a href="products.html?category=women">Women</a></li>
-        <li><a href="products.html?category=babies">Babies</a></li>
-        <li><a href="products.html?category=men">Men</a></li>
-        <li><a href="products.html?category=electronics">Electronics</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="smart-home.html">Smart Home</a></li>
+        <li><a href="electronics.html">Electronics</a></li>
+        <li><a href="pets-gadgets.html">Pet Gadgets</a></li>
+        <li><a href="products.html">Product Hub</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="misc.html">More Finds</a></li>
       </ul>
     </nav>
-    <input type="text" id="searchInput" placeholder="Search gadgets..." />
-    <button id="themeToggle">Toggle Dark Mode</button>
   </header>
-
   <main>
-    <section class="intro">
-      <h2>Welcome to GadgetPulse</h2>
-      <p>Your hub for trending tech and smart gadgets. Browse our curated collections with direct Amazon links.</p>
+    <section class="page-hero">
+      <h2>Product Hub</h2>
+      <p>Browse the main GadgetPulse collections. Choose a topic to explore useful technology and everyday gadget ideas.</p>
+      <a class="back-link" href="index.html">← Back to GadgetPulse home</a>
     </section>
-
-    <section class="featured">
-      <h2 id="categoryTitle">Featured Products</h2>
-      <div class="product-grid" id="productGrid"></div>
-      <p id="noResults">No products match your search.</p>
+    <section class="category-grid" aria-label="Product Hub topics">
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80" alt="Smart home interior" loading="lazy">
+        <div class="card-copy"><h3>Smart Home</h3><p>Connected devices, lighting, security, and home comfort.</p></div>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80" alt="Laptop and technology workspace" loading="lazy">
+        <div class="card-copy"><h3>Electronics</h3><p>Audio, accessories, computing, and everyday electronics.</p></div>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1000&q=80" alt="Dog outdoors" loading="lazy">
+        <div class="card-copy"><h3>Pet Gadgets</h3><p>Helpful ideas for pets and the people who care for them.</p></div>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=80" alt="Person shopping online with laptop" loading="lazy">
+        <div class="card-copy"><h3>Deals</h3><p>A place for featured finds and noteworthy updates.</p></div>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80" alt="Creative desk with technology" loading="lazy">
+        <div class="card-copy"><h3>More Finds</h3><p>Interesting discoveries that do not fit neatly elsewhere.</p></div>
+      </article>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 GadgetPulse. All rights reserved. As an Amazon Associate, we may earn from qualifying purchases.</p>
-  </footer>
-
-  <script>
-    const allProducts = {
-      "smart-home": [
-        {name: "Smart Plug", img: "https://m.media-amazon.com/images/I/61rT+R0uqwL._AC_SL1500_.jpg", link: "https://www.amazon.com/dp/B089DR29T6?tag=davesamazon0411-20"},
-        {name: "Smart Thermostat", img: "https://m.media-amazon.com/images/I/61dXCr3pM2L._AC_SL1500_.jpg", link: "https://www.amazon.com/dp/B08HRPDYTP?tag=davesamazon0411-20"},
-        {name: "Smart Bulb", img: "https://m.media-amazon.com/images/I/71g40mlbinL._AC_SL1500_.jpg", link: "https://www.amazon.com/dp/B07XJ6C2W3?tag=davesamazon0411-20"}
-      ],
-      "pets": [
-        {name: "Automatic Pet Feeder", img: "https://m.media-amazon.com/images/I/61lM3WzL3WL._AC_SL1500_.jpg", link: "https://www.amazon.com/dp/B07X1Y9KQF?tag=davesamazon0411-20"},
-        {name: "Pet Camera", img: "https://m.media-amazon.com/images/I/71fA2Hl3K0L._AC_SL1500_.jpg", link: "https://www.amazon.com/dp/B08L5VJ3FZ?tag=davesamazon0411-20"}
-      ],
-      "electronics": [
-        {name: "Wireless Headphones", img: "https://m.media-amazon.com/images/I/61DPkYH3l-L._AC_SL1500_.jpg", link: "https://www.amazon.com/dp/B07Y5M2V2P?tag=davesamazon0411-20"}
-      ]
-      // Add more categories and products as needed
-    };
-
-    const searchInput = document.getElementById('searchInput');
-    const productGrid = document.getElementById('productGrid');
-    const noResults = document.getElementById('noResults');
-    const categoryTitle = document.getElementById('categoryTitle');
-
-    function getCategoryFromURL() {
-      const params = new URLSearchParams(window.location.search);
-      return params.get("category") || "smart-home";
-    }
-
-    function loadProducts(category) {
-      productGrid.innerHTML = "";
-      categoryTitle.innerText = "Featured " + category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) + " Products";
-      const products = allProducts[category] || [];
-
-      if (products.length === 0) {
-        noResults.style.display = "block";
-        return;
-      } else {
-        noResults.style.display = "none";
-      }
-
-      products.forEach(p => {
-        const div = document.createElement('div');
-        div.className = 'product';
-        div.innerHTML = `
-          <img src="${p.img}" alt="${p.name}">
-          <h3>${p.name}</h3>
-          <a href="${p.link}" target="_blank">View on Amazon</a>
-        `;
-        productGrid.appendChild(div);
-      });
-    }
-
-    searchInput.addEventListener('input', () => {
-      const searchValue = searchInput.value.toLowerCase();
-      let visibleCount = 0;
-      Array.from(productGrid.children).forEach(product => {
-        const text = product.innerText.toLowerCase();
-        const match = text.includes(searchValue);
-        product.style.display = match ? "" : "none";
-        if (match) visibleCount++;
-      });
-      noResults.style.display = visibleCount === 0 ? "block" : "none";
-    });
-
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-      const html = document.documentElement;
-      const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
-
-    // Load products for the selected category on page load
-    loadProducts(getCategoryFromURL());
-  </script>
+  <footer><p>© 2026 GadgetPulse. All rights reserved.</p></footer>
 </body>
-</html> 
+</html>
