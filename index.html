@@ -1,98 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GadgetPulse — discover useful gadgets, smart-home ideas, and everyday tech.">
   <title>GadgetPulse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    [data-theme="dark"] {
-      background-color: #121212;
-      color: #eee;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      background-color: #fff;
-      z-index: 1000;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: background-color 0.3s;
-    }
-    [data-theme="dark"] header { background-color: #1e1e1e; }
-    header h1 { margin: 0.5rem 0; }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      padding: 0;
-      margin: 0.5rem 0;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav a {
-      text-decoration: none;
-      color: inherit;
-      font-weight: 600;
-    }
-    #searchInput {
-      margin: 0.5rem 0;
-      padding: 0.5rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      width: 90%;
-      max-width: 400px;
-    }
-    .intro, .featured {
-      padding: 2rem;
-      text-align: center;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 1rem;
-    }
-    .product {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-      padding: 1rem;
-    }
-    [data-theme="dark"] .product { background-color: #2a2a2a; }
-    .product:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-    }
-    .product img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .product h3 { margin: 0.5rem 0; }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #eee;
-      color: #555;
-    }
-    [data-theme="dark"] footer { background-color: #1a1a1a; color: #aaa; }
-    #themeToggle {
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f9fc; color: #263238; }
+    header { padding: 24px 5%; background: #003366; color: white; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+    header h1 { margin: 0; font-size: 2rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: white; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+    main { width: min(1100px, 90%); margin: 0 auto; }
+    .hero { text-align: center; padding: 64px 16px 44px; }
+    .hero h2 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 0 0 14px; color: #003366; }
+    .hero p { max-width: 680px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; }
+    .section-title { text-align: center; margin: 18px 0 24px; }
+    .categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; padding-bottom: 48px; }
+    .category { display: block; padding: 24px; border-radius: 12px; background: white; color: #263238; text-decoration: none; box-shadow: 0 3px 12px rgba(0,0,0,.08); border: 1px solid #e5eaf0; }
+    .category:hover { transform: translateY(-3px); box-shadow: 0 7px 18px rgba(0,0,0,.12); }
+    .category h3 { margin: 0 0 8px; color: #00509e; }
+    .category p { margin: 0; line-height: 1.5; }
+    footer { text-align: center; padding: 22px 12px; background: #eaf0f6; color: #46515c; }
+    @media (max-width: 650px) { header { justify-content: center; text-align: center; } nav { justify-content: center; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GadgetPulse</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="smart-home.html">Smart Home</a>
+      <a href="electronics.html">Electronics</a>
+      <a href="pets-gadgets.html">Pets</a>
+      <a href="deals.html">Deals</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to GadgetPulse</h2>
+      <p>Your hub for discovering useful technology, clever gadgets, and ideas that make everyday life a little easier. Explore the sections below to get started.</p>
+    </section>
+
+    <h2 class="section-title">Explore GadgetPulse</h2>
+    <section class="categories" aria-label="Gadget categories">
+      <a class="category" href="smart-home.html"><h3>Smart Home</h3><p>Explore connected-home ideas and helpful devices.</p></a>
+      <a class="category" href="electronics.html"><h3>Electronics</h3><p>Browse tech and everyday electronic gadgets.</p></a>
+      <a class="category" href="pets-gadgets.html"><h3>Pet Gadgets</h3><p>Discover ideas and tools for life with pets.</p></a>
+      <a class="category" href="products.html"><h3>Product Hub</h3><p>Visit the main collection and browse categories.</p></a>
+      <a class="category" href="deals.html"><h3>Deals</h3><p>See the latest featured finds and updates.</p></a>
+      <a class="category" href="misc.html"><h3>More Finds</h3><p>Explore additional gadgets and useful discoveries.</p></a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> GadgetPulse. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
