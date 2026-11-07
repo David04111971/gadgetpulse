@@ -1,78 +1,88 @@
-   body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
+/* GadgetPulse shared styles
+   Clean stylesheet: layout and presentation only (no HTML belongs here). */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
 header {
-    background-color: #003366;
-    color: white;<header><header>
-  <h1>GadgetPulse</h1>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#smart-home">Smart Home</a></li>
-      <li><a href="#electronics">Electronics</a></li>
-      <li><a href="#pets">Pets</a></li>
-      <li><a href="#women">Women</a></li>
-      <li><a href="#babies">Babies</a></li>
-      <li><a href="#men">Men</a></li>
-    </ul>
-  </nav>
-  <input type="text" id="searchInput" placeholder="Search gadgets..." />
-</header> 
-  <h1>GadgetPulse</h1>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#smart-home">Smart Home</a></li>
-      <li><a href="#electronics">Electronics</a></li>
-      <li><a href="#pets">Pets</a></li>
-/* Style the header background and layout */
-header {
   background-color: #003366;
-  color: white;
+  color: #fff;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
-/* Style the logo (h1) */
 header h1 {
   margin: 0;
   font-size: 28px;
 }
 
-/* Style the nav list */
 nav ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 20px;
 }
 
-/* Style the links */
-nav ul li a {
-  color: white;
+nav ul li a,
+nav a {
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav a:hover {
   color: #ffcc00;
 }
 
-/* Style the search input */
 #searchInput {
   padding: 8px 12px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  border: none;
-  font-size: 14px;
-  max-width: 200px;
-   
+  font: inherit;
+  max-width: 100%;
+}
 
+main {
+  width: min(1100px, 92%);
+  margin: 24px auto;
+}
+
+footer {
+  padding: 18px;
+  text-align: center;
+  background-color: #eee;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+}
