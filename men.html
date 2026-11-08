@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gadgets for Men – GadgetPulse</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore practical tech, grooming tools, wearables, and everyday accessories selected for usefulness and value.">
+  <title>For Men | GadgetPulse</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; text-align: center; }
+    .category-grid { max-width: 1100px; margin: 0 auto 3rem; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: 1.25rem; }
+    .category-card { overflow: hidden; border-radius: 14px; background: #fff; box-shadow: 0 3px 14px rgba(0,0,0,.09); }
+    .category-card img { display: block; width: 100%; height: 190px; object-fit: cover; }
+    .card-copy { padding: 1rem 1.1rem 1.25rem; }
+    .category-card h3 { margin: 0 0 .4rem; }
+    .category-card p { margin: 0; }
+    .back-link { display: inline-block; margin: 1rem 0 2rem; }
+  </style>
 </head>
 <body>
-  <header><h1>For Men</h1><a href="index.html">← Back to Home</a></header>
+  <header>
+    <h1>GadgetPulse</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Product Hub</a></li>
+        <li><a href="smart-home.html">Smart Home</a></li>
+        <li><a href="electronics.html">Electronics</a></li>
+        <li><a href="pets-gadgets.html">Pet Gadgets</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="misc.html">More Finds</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <p>Smart tools, grooming tech, and everyday gadgets for modern men.</p>
+    <section class="page-hero">
+      <h2>For Men</h2>
+      <p>Explore practical tech, grooming tools, wearables, and everyday accessories selected for usefulness and value.</p>
+      <a class="back-link" href="index.html">← Back to GadgetPulse home</a>
+    </section>
+    <section class="category-grid" aria-label="For Men topics">
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=80" alt="Over-ear headphones" loading="lazy">
+        <div class="card-copy"><h3>Audio & Entertainment</h3><p>Compare comfort, sound controls, connection options, microphone quality, and battery life.</p></div>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=80" alt="Minimal wristwatch" loading="lazy">
+        <div class="card-copy"><h3>Wearables & Accessories</h3><p>Check fit, durability, phone compatibility, and the features you will actually use.</p></div>
+      </article>
+      <article class="category-card">
+        <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=1000&q=80" alt="Electric grooming tool" loading="lazy">
+        <div class="card-copy"><h3>Grooming Tech</h3><p>Review cleaning needs, replacement parts, charging, and skin-sensitivity guidance.</p></div>
+      </article>
+    </section>
   </main>
+  <footer><p>© 2026 GadgetPulse. All rights reserved.</p></footer>
 </body>
 </html>
