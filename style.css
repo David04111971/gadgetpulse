@@ -86,3 +86,15 @@ footer {
     width: 100%;
   }
 }
+
+footer a {
+  color: #003366;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+footer .site-links {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+}
