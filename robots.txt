@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://david04111971.github.io/gadgetpulse/sitemap.xml
