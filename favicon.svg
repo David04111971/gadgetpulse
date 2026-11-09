@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="GadgetPulse">
+  <rect width="128" height="128" rx="28" fill="#071426"/>
+  <path d="M96 35A48 48 0 1 0 96 93" fill="none" stroke="#087cff" stroke-width="15" stroke-linecap="round"/>
+  <path d="M22 66h20l10-16 12 31 13-42 11 27h20" fill="none" stroke="#f5fbff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 66h20l10-16 12 31 13-42 11 27h20" fill="none" stroke="#00b7ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
