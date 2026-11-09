@@ -1,57 +1,65 @@
-/* GadgetPulse shared styles
-   Clean stylesheet: layout and presentation only (no HTML belongs here). */
-
-* {
-  box-sizing: border-box;
-}
-
+/* GadgetPulse shared styles: layout, accessibility and brand system. */
+* { box-sizing: border-box; }
+html { color-scheme: light; }
 body {
   font-family: 'Inter', Arial, sans-serif;
   background-color: #f8f8f8;
-  color: #333;
+  color: #263238;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
-
-header {
-  background-color: #003366;
+.site-header {
+  background: #071426;
   color: #fff;
-  padding: 20px;
+  padding: 14px clamp(16px, 4vw, 48px);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 16px 28px;
+  border-bottom: 3px solid #087cff;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 28px;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  white-space: nowrap;
 }
-
-nav ul {
+.brand img { display: block; width: 46px; height: 46px; }
+.brand-pulse { color: #20a4ff; }
+.brand:focus-visible, .site-nav a:focus-visible, footer a:focus-visible {
+  outline: 3px solid #67c5ff;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+.site-nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  gap: 8px 18px;
   margin: 0;
   padding: 0;
 }
-
-nav ul li a,
-nav a {
-  color: #fff;
+.site-nav a {
+  display: inline-block;
+  color: #f3f7ff;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
+  font-weight: 650;
+  padding: 8px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
 }
-
-nav ul li a:hover,
-nav a:hover {
-  color: #ffcc00;
+.site-nav a:hover, .site-nav a[aria-current="page"] {
+  color: #55bdff;
+  border-bottom-color: #159cff;
 }
-
 #searchInput {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -59,42 +67,26 @@ nav a:hover {
   font: inherit;
   max-width: 100%;
 }
-
-main {
-  width: min(1100px, 92%);
-  margin: 24px auto;
-}
-
+main { width: min(1100px, 92%); margin: 24px auto; }
+main h1 { line-height: 1.2; }
 footer {
   padding: 18px;
   text-align: center;
-  background-color: #eee;
-  color: #555;
+  background-color: #071426;
+  color: #e8eef7;
 }
-
-@media (max-width: 700px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    gap: 12px;
-  }
-
-  #searchInput {
-    width: 100%;
-  }
-}
-
 footer a {
-  color: #003366;
+  color: #72caff;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
-
-footer .site-links {
-  margin: 10px 0 0;
-  font-size: 0.95rem;
+footer .site-links { margin: 10px 0 0; font-size: .95rem; }
+@media (max-width: 760px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .brand img { width: 40px; height: 40px; }
+  .site-nav { width: 100%; }
+  .site-nav ul { gap: 4px 14px; }
+  .site-nav a { padding: 6px 0; font-size: .94rem; }
+  #searchInput { width: 100%; }
 }
