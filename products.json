@@ -1,4 +1,98 @@
 [
-  {"id":"sample-smart-plug","name":"Smart Plug","brand":"Example listing","category":"Smart Home","description":"Draft example only. Replace with a real product, accurate specifications and an approved tracked retailer URL before publishing.","retailer":"Pending approval","imageUrl":"","affiliateUrl":"","status":"draft","featured":false},
-  {"id":"sample-wireless-earbuds","name":"Wireless Earbuds","brand":"Example listing","category":"Electronics","description":"Draft example only. Replace with a real product, accurate specifications and an approved tracked retailer URL before publishing.","retailer":"Pending approval","imageUrl":"","affiliateUrl":"","status":"draft","featured":false}
+  {
+    "id": "sample-smart-plug",
+    "name": "Smart Plug",
+    "brand": "Example listing",
+    "category": "Smart Home",
+    "description": "Draft example only. Replace with a real product, accurate specifications and an approved tracked retailer URL before publishing.",
+    "retailer": "Pending approval",
+    "imageUrl": "",
+    "affiliateUrl": "",
+    "status": "draft",
+    "featured": false
+  },
+  {
+    "id": "sample-wireless-earbuds",
+    "name": "Wireless Earbuds",
+    "brand": "Example listing",
+    "category": "Electronics",
+    "description": "Draft example only. Replace with a real product, accurate specifications and an approved tracked retailer URL before publishing.",
+    "retailer": "Pending approval",
+    "imageUrl": "",
+    "affiliateUrl": "",
+    "status": "draft",
+    "featured": false
+  },
+  {
+    "id": "ebay-consumer-electronics-outlet",
+    "name": "Consumer Electronics Brand Outlet",
+    "brand": "eBay marketplace",
+    "category": "Electronics",
+    "description": "Browse a rotating selection of consumer-electronics offers from eBay sellers. Open the retailer page to check the exact items, prices and availability.",
+    "retailer": "eBay",
+    "imageUrl": "",
+    "affiliateUrl": "https://www.ebay.com/e/_electronics/26-rw45-brand-outlet-sfc-consumer-electronics?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
+    "status": "active",
+    "featured": true
+  },
+  {
+    "id": "ebay-verizon-iphone-16",
+    "name": "Verizon iPhone 16 Promotion",
+    "brand": "Verizon",
+    "category": "Electronics",
+    "description": "Explore the Verizon iPhone 16 promotion on eBay. Review the listing details, seller information and current availability before purchasing.",
+    "retailer": "eBay",
+    "imageUrl": "",
+    "affiliateUrl": "https://www.ebay.com/e/ad/verizon-ps-custom-iphone-16?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
+    "status": "active",
+    "featured": true
+  },
+  {
+    "id": "ebay-meta-electronics-promotion",
+    "name": "Meta Electronics Offers",
+    "brand": "Meta",
+    "category": "Electronics",
+    "description": "Visit eBay's Meta electronics promotion to see the products currently included. Product selection and availability may change.",
+    "retailer": "eBay",
+    "imageUrl": "",
+    "affiliateUrl": "https://www.ebay.com/e/_electronics/us-26-meta?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
+    "status": "active",
+    "featured": false
+  },
+  {
+    "id": "ebay-amazing-wireless-samsung",
+    "name": "Samsung Deals from Amazing Wireless",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "description": "Browse the Samsung promotion from Amazing Wireless on eBay. Check each item's specifications, seller details and availability.",
+    "retailer": "eBay",
+    "imageUrl": "",
+    "affiliateUrl": "https://www.ebay.com/e/ad/amazingwireless-samsung?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
+    "status": "active",
+    "featured": false
+  },
+  {
+    "id": "ebay-ingram-laptops",
+    "name": "Laptop Offers from Ingram",
+    "brand": "Ingram",
+    "category": "Electronics",
+    "description": "Explore laptop offers on eBay. Confirm the exact model, condition, seller and return terms on the retailer page.",
+    "retailer": "eBay",
+    "imageUrl": "",
+    "affiliateUrl": "https://www.ebay.com/e/ad/ingram-laptops?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
+    "status": "active",
+    "featured": true
+  },
+  {
+    "id": "ebay-consumer-electronics-meta-samsung",
+    "name": "Consumer Tech & Device Deals",
+    "brand": "eBay marketplace",
+    "category": "Electronics",
+    "description": "Browse additional consumer-technology promotions on eBay. The retailer page shows the current products, prices and availability.",
+    "retailer": "eBay",
+    "imageUrl": "",
+    "affiliateUrl": "https://www.ebay.com/e/_electronics/26-rw45-brand-outlet-sfc-consumer-electronics?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
+    "status": "active",
+    "featured": false
+  }
 ]
