@@ -82,17 +82,5 @@
     "affiliateUrl": "https://www.ebay.com/e/ad/ingram-laptops?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
     "status": "active",
     "featured": true
-  },
-  {
-    "id": "ebay-consumer-electronics-meta-samsung",
-    "name": "Consumer Tech & Device Deals",
-    "brand": "eBay marketplace",
-    "category": "Electronics",
-    "description": "Browse additional consumer-technology promotions on eBay. The retailer page shows the current products, prices and availability.",
-    "retailer": "eBay",
-    "imageUrl": "",
-    "affiliateUrl": "https://www.ebay.com/e/_electronics/26-rw45-brand-outlet-sfc-consumer-electronics?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
-    "status": "active",
-    "featured": false
   }
 ]
