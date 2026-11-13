@@ -358,5 +358,17 @@
     "affiliateUrl": "https://www.ebay.com/e/sporting-goods/26-us-upgrade-your-game-for-less?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339245466&toolid=20014&customid=&mkevt=1",
     "status": "active",
     "featured": false
+  },
+  {
+    "id": "awin-cozyspiritstudio-prints-posters",
+    "name": "Prints & Posters",
+    "brand": "CozySpiritStudio",
+    "category": "Home & Living",
+    "description": "Explore wall art and poster designs from CozySpiritStudio. Check individual product details, pricing and availability on the retailer's website.",
+    "retailer": "CozySpiritStudio",
+    "imageUrl": "",
+    "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=130331&awinaffid=3150496&ued=https%3A%2F%2Fcozyspiritstudio.com%2Fcollections%2Fprints-posters",
+    "status": "active",
+    "featured": true
   }
 ]
